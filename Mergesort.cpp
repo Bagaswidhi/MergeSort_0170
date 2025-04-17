@@ -39,6 +39,10 @@ void mergeSort(int low, int high)
     }
 
     int mid = (low + high) / 2; // step 2
+
+    //Fungsi Rekursi - Memanggil diri sendiri
+    mergeSort(low, mid); // step 3
+    mergeSort(mid + 1, high); // step 3a
 }
 
 int main()
