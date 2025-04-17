@@ -74,6 +74,11 @@ void mergeSort(int low, int high)
         i++; 
         k++; 
     }
+
+    for (int y = low; y <= high; y++)
+    {
+        arr[y] = B[y]; // step 5
+    }
 }
 
 int main()
