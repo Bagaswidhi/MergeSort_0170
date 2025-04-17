@@ -33,7 +33,10 @@ void input() // Prosedur input data
 
 void mergeSort(int low, int high)
 {
-
+    if (low >= high) // step 1
+    {
+        return; // step 1a
+    }
 }
 
 int main()
