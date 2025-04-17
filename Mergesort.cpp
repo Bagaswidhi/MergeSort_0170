@@ -93,5 +93,7 @@ void output()
 
 int main()
 {
-
+    input(); // Memanggil prosedur input
+    mergeSort(0, n - 1); // Memanggil fungsi MergeSort
+    output(); // Memanggil prosedur output
 }
