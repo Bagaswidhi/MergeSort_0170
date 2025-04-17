@@ -2,11 +2,11 @@
 using namespace std;
 
 int arr[20], B[20]; // array utama dan array sementara
-int n; // ukuran array
+int n;              // ukuran array
 
 void input() // Prosedur input data
 {
-    while(true)
+    while (true)
     {
         cout << "Masukkan panjang element array : ";
         cin >> n;
@@ -15,7 +15,7 @@ void input() // Prosedur input data
         {
             break;
         }
-        else 
+        else
         {
             cout << "\n Maksimal panjang array adalah 20";
         }
@@ -40,39 +40,39 @@ void mergeSort(int low, int high)
 
     int mid = (low + high) / 2; // step 2
 
-    //Fungsi Rekursi - Memanggil diri sendiri
-    mergeSort(low, mid); // step 3
+    // Fungsi Rekursi - Memanggil diri sendiri
+    mergeSort(low, mid);      // step 3
     mergeSort(mid + 1, high); // step 3a
 
-    int i = low; // step 4
+    int i = low;     // step 4
     int j = mid + 1; // step 4a
-    int k = low; // step 4b
+    int k = low;     // step 4b
 
     while (i <= mid && j <= high) // step 4d
     {
-        if (arr[i] <= arr[j]) 
+        if (arr[i] <= arr[j])
         {
-            B[k] = arr[i]; 
-            i++; 
+            B[k] = arr[i];
+            i++;
         }
-        else 
+        else
         {
-            B[k] = arr[j]; 
-            j++; 
+            B[k] = arr[j];
+            j++;
         }
-        k++; 
+        k++;
     }
     while (j <= high) // step 4e
     {
-        B[k] = arr[j]; 
-        j++; 
-        k++; 
+        B[k] = arr[j];
+        j++;
+        k++;
     }
     while (i <= mid) // step 4f
     {
-        B[k] = arr[i]; 
-        i++; 
-        k++; 
+        B[k] = arr[i];
+        i++;
+        k++;
     }
 
     for (int y = low; y <= high; y++)
@@ -93,7 +93,7 @@ void output()
 
 int main()
 {
-    input(); // Memanggil prosedur input
+    input();             // Memanggil prosedur input
     mergeSort(0, n - 1); // Memanggil fungsi MergeSort
-    output(); // Memanggil prosedur output
+    output();            // Memanggil prosedur output
 }
