@@ -30,6 +30,12 @@ void input() // Prosedur input data
         cin >> arr[i];
     }
 }
+
+void mergeSort(int low, int high)
+{
+
+}
+
 int main()
 {
 
